@@ -10,3 +10,11 @@ Parágrafos
 Links
 Entidades
 etc...
+
+# O que foi realizado?
+
+Um site fictício de uma universidade com três páginas:
+
+Home = index.html
+Quem Somos = quem-somos.html
+Contato = contato.html
