@@ -34,3 +34,15 @@ function greetCustomer(customer) {
 };
 
 console.log(greetCustomer(trybeBankCustomers[0])); // Olá, Oliva,Nat,Gus. Essa é sua conta do TrybeBank.
+
+// Função com loop for
+
+const trybeBankCustomers2 = ['Oliva', 'Nat', 'Gus'];
+
+function greetCustomer(customer) {
+  for (let index = 0; index < customer.length; index += 1) {
+    console.log(`Olá, ${customer[index]}. Essa é sua conta do TrybeBank.`);
+  }
+};
+
+greetCustomer(trybeBankCustomers2);
