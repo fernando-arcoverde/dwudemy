@@ -46,3 +46,14 @@ function greetCustomer(customer) {
 };
 
 greetCustomer(trybeBankCustomers2);
+
+// ... exemplos
+
+const trybeBankCustomers3 = ['Oliva', 'Nat', 'Gus'];
+const pirilamposCustomers = ['Oliva', 'Nat', 'Gus'];
+
+function findElement(array, element) {
+    return array.includes(element);
+}
+
+console.log(findElement(trybeBankCustomers3, 'Oliva'));
