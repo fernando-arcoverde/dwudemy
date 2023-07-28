@@ -24,3 +24,13 @@ function soma(a, b = 1) {
 
 console.log(soma(4, 7));
 console.log(soma(4));
+
+// Outro Exemplo
+
+const trybeBankCustomers = ['Oliva', 'Nat', 'Gus'];
+
+function greetCustomer(customer) {
+  return `Olá, ${customer}. Essa é sua conta do TrybeBank.`;
+};
+
+console.log(greetCustomer(trybeBankCustomers[0])); // Olá, Oliva,Nat,Gus. Essa é sua conta do TrybeBank.
