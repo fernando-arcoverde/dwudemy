@@ -1,5 +1,7 @@
-let lotteryNumbers = [24, 32, 60, 1, 11, 53];
+let lotteryNumbers = [];
 
-for (let index = 0; index < lotteryNumbers.length; index += 1) {
-  
+for (let index = 0; index < 6; index += 1) {
+  lotteryNumbers.push(Math.ceil(Math.random() * 60));
 }
+
+console.log(lotteryNumbers);
