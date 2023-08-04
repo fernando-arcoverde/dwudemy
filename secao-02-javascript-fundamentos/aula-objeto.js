@@ -8,3 +8,8 @@ const macDonalds = {
     unit: 'Park Shopping Barigui',
 }
 
+macDonalds.bigMac = 78.75;
+macDonalds['bigMac'] = 178.99;
+
+console.log(macDonalds);
+console.log(macDonalds.bigMac);
