@@ -151,11 +151,12 @@ valor 'Muito Caro', senão, recebe o valor 'Tá de boa!'.
 
 const moreExpensive = (data, category) => {
   let biggestPrice = data[category][0].preco;
-  for (let index = 1; index < data[category].length; index += 1) {
-    if (data[category][index].preco > biggestPrice) {
-        biggestPrice = data[category][index].preco;
-    }
-  }
+  const objCat = data[category];
+  for (let index = 1; index < objCat.length; index += 1) {
+    if (objCat[index].preco > biggestPrice) {
+        biggestPrice = objCat[index].preco;
+    };
+  };
   return biggestPrice;
 };
 
