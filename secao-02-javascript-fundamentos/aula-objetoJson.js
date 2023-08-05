@@ -96,7 +96,7 @@ const menu = {
         },
         {
             nome: "Cheesecake",
-            preco: 6.29,
+            preco: 10.29,
             ingredientes: ["massa de biscoito", "cream cheese", "açúcar", "baunilha"],
             calorias: 400
         },
@@ -125,7 +125,7 @@ const newItem = {
 
 menu.sanduiches.push(newItem);
 
-console.log(menu.sanduiches);
+// console.log(menu.sanduiches);
 
 /*
 Adicionar a propriedade 'isExpensive' para todos os elementos de uma categoria do menu.
@@ -135,7 +135,7 @@ valor 'Muito Caro', senão, recebe o valor 'Tá de boa!'.
 
 function addProperty (category, value) {
   for (let index = 0; index < menu[category].length; index += 1) {
-    if (menu[category][index].price >= value) {
+    if (menu[category][index].preco >= value) {
       menu[category][index].isExpensive = 'Muito Caro';
     } else {
         menu[category][index].isExpensive = 'Tá de Boa!';
@@ -144,3 +144,5 @@ function addProperty (category, value) {
 };
 
 addProperty('sobremesas', 9.90);
+
+console.log(menu.sobremesas);
