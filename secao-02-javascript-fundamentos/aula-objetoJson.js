@@ -135,14 +135,15 @@ valor 'Muito Caro', senão, recebe o valor 'Tá de boa!'.
 
 function addProperty (category, value) {
   for (let index = 0; index < menu[category].length; index += 1) {
-    if (menu[category][index].preco >= value) {
-      menu[category][index].isExpensive = 'Muito Caro';
+    const item = menu[category][index];
+    if (item.preco >= value) {
+      item.isExpensive = 'Muito Caro';
     } else {
-        menu[category][index].isExpensive = 'Tá de Boa!';
+        item.isExpensive = 'Tá de Boa!';
     };
   };
 };
 
-addProperty('sobremesas', 9.90);
+addProperty('sanduiches', 10.90);
 
-console.log(menu.sobremesas);
+console.log(menu.sanduiches);
