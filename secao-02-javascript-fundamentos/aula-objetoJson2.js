@@ -133,18 +133,34 @@ Caso o preço do elemento seja maior que o valor estipulado, a propriedade 'isEx
 valor 'Muito Caro', senão, recebe o valor 'Tá de boa!'.
 */
 
-function addProperty (category, value) {
-  for (let index = 0; index < menu[category].length; index += 1) {
-    const item = menu[category][index];
-    item.preco >= value ? item.isExpensive = 'Muito Caro' : item.isExpensive = 'Tá de Boa!';
-    // if (item.preco >= value) {
-    //   item.isExpensive = 'Muito Caro';
-    // } else {
-    //     item.isExpensive = 'Tá de Boa!';
-    // };
-  };
+// function addProperty (category, value) {
+//   for (let index = 0; index < menu[category].length; index += 1) {
+//     const item = menu[category][index];
+//     item.preco >= value ? item.isExpensive = 'Muito Caro' : item.isExpensive = 'Tá de Boa!';
+//     // if (item.preco >= value) {
+//     //   item.isExpensive = 'Muito Caro';
+//     // } else {
+//     //     item.isExpensive = 'Tá de Boa!';
+//     // };
+//   };
+// };
+
+// addProperty('sanduiches', 10.90);
+
+// Descubra qual é o produto mais caro de uma determinada categoria.
+
+const moreExpensive = (data, category) => {
+  let biggestPrice = data[category][0].preco;
+  for (let index = 1; index < data[category].length; index += 1) {
+    if (data[category][index].preco > biggestPrice) {
+        biggestPrice = data[category][index].preco;
+    }
+  }
+  return biggestPrice;
 };
 
-addProperty('sanduiches', 10.90);
+console.log(moreExpensive(menu, 'sanduiches'));
+console.log(moreExpensive(menu, 'bebidas'));
+console.log(moreExpensive(menu, 'sobremesas'));
 
-console.log(menu.sanduiches);
+// 
