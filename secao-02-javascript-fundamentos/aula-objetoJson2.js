@@ -149,19 +149,30 @@ valor 'Muito Caro', senão, recebe o valor 'Tá de boa!'.
 
 // Descubra qual é o produto mais caro de uma determinada categoria.
 
-const moreExpensive = (data, category) => {
-  let biggestPrice = data[category][0].preco;
-  const objCat = data[category];
-  for (let index = 1; index < objCat.length; index += 1) {
-    if (objCat[index].preco > biggestPrice) {
-        biggestPrice = objCat[index].preco;
+// const moreExpensive = (data, category) => {
+//   let biggestPrice = data[category][0].preco;
+//   const objCat = data[category];
+//   for (let index = 1; index < objCat.length; index += 1) {
+//     if (objCat[index].preco > biggestPrice) {
+//         biggestPrice = objCat[index].preco;
+//     };
+// };
+// return `O produto mais caro custa: R$${biggestPrice.toFixed(2)}`;
+// };
+
+// console.log(moreExpensive(menu, 'sanduiches'));
+// console.log(moreExpensive(menu, 'bebidas'));
+// console.log(moreExpensive(menu, 'sobremesas'));
+
+// Crie uma forma que permite cadastrar novos itens ao menu.
+
+const checkItem = (data, category, item) => {
+  for (let index = 0; index < data[category].length; index += 1) {
+    if (data[category][index].nome === item) {
+        return true;
     };
-};
-return `O produto mais caro custa: R$${biggestPrice.toFixed(2)}`;
+  };
+  return false;
 };
 
-console.log(moreExpensive(menu, 'sanduiches'));
-console.log(moreExpensive(menu, 'bebidas'));
-console.log(moreExpensive(menu, 'sobremesas'));
-
-// 
+console.log(checkItem(menu, 'sanduiches', 'Sanduíche'));
