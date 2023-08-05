@@ -126,3 +126,21 @@ const newItem = {
 menu.sanduiches.push(newItem);
 
 console.log(menu.sanduiches);
+
+/*
+Adicionar a propriedade 'isExpensive' para todos os elementos de uma categoria do menu.
+Caso o preço do elemento seja maior que o valor estipulado, a propriedade 'isExpensive' recebe o
+valor 'Muito Caro', senão, recebe o valor 'Tá de boa!'.
+*/
+
+function addProperty (category, value) {
+  for (let index = 0; index < menu[category].length; index += 1) {
+    if (menu[category][index].price >= value) {
+      menu[category][index].isExpensive = 'Muito Caro';
+    } else {
+        menu[category][index].isExpensive = 'Tá de Boa!';
+    };
+  };
+};
+
+addProperty('sobremesas', 9.90);
