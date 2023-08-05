@@ -156,8 +156,8 @@ const moreExpensive = (data, category) => {
     if (objCat[index].preco > biggestPrice) {
         biggestPrice = objCat[index].preco;
     };
-  };
-  return biggestPrice;
+};
+return `O produto mais caro custa: R$${biggestPrice.toFixed(2)}`;
 };
 
 console.log(moreExpensive(menu, 'sanduiches'));
