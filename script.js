@@ -2,4 +2,5 @@ document.getElementById("teste").innerText = "Alterando o texto através do ID e
 
 console.log(document.getElementById("teste2").innerText);
 
-document.getElementsByClassName("piloto-atual").innerText
+document.getElementsByClassName("piloto-atual")[0].innerText = 'Fernando Alonso';
+
